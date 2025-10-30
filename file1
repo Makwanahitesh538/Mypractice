@@ -1,0 +1,22 @@
+# File handling demo
+
+# Create and write to a file
+with open("demo.txt", "w") as fh:
+    fh.write("Hello from Python file handling!\n")
+    fh.write("This is a new line.\n")
+
+# Read the whole file
+with open("demo.txt", "r") as fh:
+    print("File content:\n")
+    print(fh.read())
+
+# Append extra text
+with open("demo.txt", "a") as fh:
+    fh.write("Appended text at the end.\n")
+
+# Read line by line
+with open("demo.txt", "r") as fh:
+    print("\nReading line by line:")
+    for line in fh:
+        print(line.strip())
+
