@@ -2,7 +2,7 @@
 
 # Create and write to a file
 with open("demo.txt", "w") as fh:
-    fh.write("Hello from Python file handling!\n")
+    fh.write("Hello file handling!\n")
     fh.write("This is a new line.\n")
 
 # Read the whole file
