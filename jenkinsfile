@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+              git branch: 'main', url: 'git@github.com:Makwanahitesh538/Mypractice.git'
+            }
+        }
+        stage('init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+         stage('plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+    }
+}
